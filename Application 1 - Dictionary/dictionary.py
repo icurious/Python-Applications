@@ -41,8 +41,8 @@ while True:
     print("2.Exit ")
     print("*************************")
     print("\n")
-    choice = int(input("Select Option: "))
-    if choice==1:
+    choice = input("Select Option: ")
+    if choice==str(1):
         #take word from user and print result
         word = input("Enter Word: ")
         print("\n")
@@ -53,7 +53,7 @@ while True:
                 print(str(index+1) +": " +item)
         else:
             print(output)
-    elif choice==2:
+    elif choice==str(2):
         break
     else:
         print("Please Enter correct Option")
