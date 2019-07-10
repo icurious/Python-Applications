@@ -32,12 +32,28 @@ def translate(word):
 
 
 
-#take word from user and print result
-word = input("Enter Word: ")
-output = translate(word)
 
-if type(output) == list:
-    for item in output:
-        print(item)
-else:
-    print(output)
+
+while True:
+    print("\n")
+    print("*************************")
+    print("1.Find in Dictionary ")
+    print("2.Exit ")
+    print("*************************")
+    print("\n")
+    choice = int(input("Select Option: "))
+    if choice==1:
+        #take word from user and print result
+        word = input("Enter Word: ")
+        print("\n")
+        output = translate(word)
+
+        if type(output) == list:
+            for index,item in enumerate(output):
+                print(str(index+1) +": " +item)
+        else:
+            print(output)
+    elif choice==2:
+        break
+    else:
+        print("Please Enter correct Option")
