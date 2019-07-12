@@ -1,4 +1,4 @@
-A Simple dictionary in Python.
+A Simple but intelligent dictionary in Python.
 
 Runs in terminal.
 Data is from a json file kept in the same path.
