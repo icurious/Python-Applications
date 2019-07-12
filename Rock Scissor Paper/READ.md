@@ -1,1 +1,1 @@
-A Simple Rock-Scissor-Paper in Python.
+A Simple Rock-Scissor-Paper game in Python.
