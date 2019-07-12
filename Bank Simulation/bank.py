@@ -3,9 +3,11 @@ from random import randint
 class Accounts:
 
     def __init__(self):
+        #Dictionary to store all accounts information
+        #structure => data[acc_number] = [name,balance]
         self.data = {}
 
-
+    #Function to create a new account
     def create(self,name,initial_deposit):
         self.acc_number = randint(10000,99999)
         while True:
@@ -16,7 +18,7 @@ class Accounts:
         self.data[self.acc_number]=[name,initial_deposit]
         print("\nAccount Created. Your Account Number is {}" .format(self.acc_number))
 
-
+    #To aunthenticate if the account exists
     def verify(self,name,acc_number):
         if acc_number in self.data.keys():
             if name in self.data[acc_number]:
@@ -29,11 +31,12 @@ class Accounts:
             print("\nAccount Authentication Failed.")
             return False
 
-
+    #To deposit and update balance
     def deposit(self,amount):
         self.data[self.acc_number][1] = self.data[self.acc_number][1] + amount
         self.display()
 
+    #To withdraw and update balance
     def withdraw(self,amount):
         if amount > self.data[self.acc_number][1]:
             print("Insufficient Funds")
@@ -41,7 +44,7 @@ class Accounts:
             self.data[self.acc_number][1] = self.data[self.acc_number][1] - amount
         self.display()
 
-
+    #To display Balance    
     def display(self):
         print("\nAccount Balance: {}" .format(self.data[self.acc_number][1]))
 
